@@ -1,0 +1,18 @@
+# Full pipeline (data preparation, training, cross-validation, reports, tests).
+# Versions are the ones the sealed build ran on (Python 3.9.0, Windows 10).
+numpy==2.0.2
+pandas==2.3.3
+scipy==1.13.1
+scikit-learn==1.6.1
+wfdb==4.3.1
+matplotlib==3.9.4
+statsmodels==0.14.6
+tqdm==4.70.1
+joblib==1.5.3
+pyyaml
+pytest
+openpyxl
+streamlit>=1.30
+# Encoder (Track E) only. The shipped final model is Track F and does not need it.
+# For an NVIDIA GPU install the CUDA build from pytorch.org instead.
+torch==2.7.1

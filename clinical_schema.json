@@ -1,0 +1,181 @@
+{
+  "schema_version": "1.0",
+  "description": "Pregnancy history form for the CTG Risk Monitor. Fields with in_model = false are shown to the clinician and stored, but do not change the probability: CTU-UHB does not record them, so no likelihood ratio could be fitted for them without local data.",
+  "blocks": [
+    "Baseline",
+    "Past pregnancy",
+    "Current pregnancy"
+  ],
+  "n_fields": 21,
+  "n_in_model": 11,
+  "fields": [
+    {
+      "name": "age",
+      "block": "Baseline",
+      "type": "number",
+      "allowed_values": "years, 14-55",
+      "in_model": true,
+      "model_item": "age_band"
+    },
+    {
+      "name": "chronic_hypertension",
+      "block": "Baseline",
+      "type": "boolean",
+      "allowed_values": "0/1",
+      "in_model": true,
+      "model_item": "hypertension"
+    },
+    {
+      "name": "diabetes",
+      "block": "Baseline",
+      "type": "boolean",
+      "allowed_values": "0/1 (pre-existing or gestational)",
+      "in_model": true,
+      "model_item": "diabetes"
+    },
+    {
+      "name": "anaemia",
+      "block": "Baseline",
+      "type": "boolean",
+      "allowed_values": "0/1",
+      "in_model": false,
+      "model_item": null
+    },
+    {
+      "name": "other_medical_disease",
+      "block": "Baseline",
+      "type": "text",
+      "allowed_values": "free text",
+      "in_model": false,
+      "model_item": null
+    },
+    {
+      "name": "gravidity",
+      "block": "Past pregnancy",
+      "type": "number",
+      "allowed_values": "1-20",
+      "in_model": false,
+      "model_item": null
+    },
+    {
+      "name": "parity",
+      "block": "Past pregnancy",
+      "type": "number",
+      "allowed_values": "0-15",
+      "in_model": true,
+      "model_item": "nullipara"
+    },
+    {
+      "name": "previous_caesarean",
+      "block": "Past pregnancy",
+      "type": "boolean",
+      "allowed_values": "0/1",
+      "in_model": false,
+      "model_item": null
+    },
+    {
+      "name": "previous_stillbirth_or_nnd",
+      "block": "Past pregnancy",
+      "type": "boolean",
+      "allowed_values": "0/1",
+      "in_model": false,
+      "model_item": null
+    },
+    {
+      "name": "previous_growth_restricted_or_preterm",
+      "block": "Past pregnancy",
+      "type": "boolean",
+      "allowed_values": "0/1",
+      "in_model": false,
+      "model_item": null
+    },
+    {
+      "name": "gestational_age_weeks",
+      "block": "Current pregnancy",
+      "type": "number",
+      "allowed_values": "weeks, 36-44",
+      "in_model": true,
+      "model_item": "gest_band"
+    },
+    {
+      "name": "preeclampsia",
+      "block": "Current pregnancy",
+      "type": "boolean",
+      "allowed_values": "0/1",
+      "in_model": true,
+      "model_item": "preeclampsia"
+    },
+    {
+      "name": "growth_restriction",
+      "block": "Current pregnancy",
+      "type": "boolean",
+      "allowed_values": "0/1",
+      "in_model": false,
+      "model_item": null
+    },
+    {
+      "name": "liquor_volume",
+      "block": "Current pregnancy",
+      "type": "category",
+      "allowed_values": "normal / oligohydramnios / polyhydramnios",
+      "in_model": false,
+      "model_item": null
+    },
+    {
+      "name": "meconium",
+      "block": "Current pregnancy",
+      "type": "boolean",
+      "allowed_values": "0/1",
+      "in_model": true,
+      "model_item": "meconium"
+    },
+    {
+      "name": "prom",
+      "block": "Current pregnancy",
+      "type": "boolean",
+      "allowed_values": "0/1 (prelabour rupture of membranes)",
+      "in_model": true,
+      "model_item": "prom"
+    },
+    {
+      "name": "fever",
+      "block": "Current pregnancy",
+      "type": "boolean",
+      "allowed_values": "0/1",
+      "in_model": true,
+      "model_item": "pyrexia"
+    },
+    {
+      "name": "bleeding",
+      "block": "Current pregnancy",
+      "type": "boolean",
+      "allowed_values": "0/1",
+      "in_model": false,
+      "model_item": null
+    },
+    {
+      "name": "reduced_movements",
+      "block": "Current pregnancy",
+      "type": "boolean",
+      "allowed_values": "0/1",
+      "in_model": false,
+      "model_item": null
+    },
+    {
+      "name": "induction_or_oxytocin",
+      "block": "Current pregnancy",
+      "type": "boolean",
+      "allowed_values": "0/1",
+      "in_model": true,
+      "model_item": "induced"
+    },
+    {
+      "name": "presentation",
+      "block": "Current pregnancy",
+      "type": "category",
+      "allowed_values": "cephalic / breech / other",
+      "in_model": true,
+      "model_item": "non_cephalic"
+    }
+  ]
+}
